@@ -184,8 +184,8 @@ function onUseRope(player, item, fromPosition, target, toPosition, isHotkey)
 end
 
 function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
-	local targetId = target.itemid, target.actionid
-	if isInArray(others, targetId) then
+	local targetId, targetActionId = target.itemid, target.actionid
+	if isInArray(holes, targetId) then
 		target:transform(targetId + 1)
 		target:decay()
 
