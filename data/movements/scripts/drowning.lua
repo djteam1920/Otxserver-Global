@@ -8,6 +8,11 @@ function onStepIn(creature, item, position, fromPosition)
 	if player == nil then
 		return true
 	end
+	
+	if item:getPosition() == Position(31913, 32713, 12) then -- HERE I CHECK THE POSITIONS, YOU NEED EDIT IT TO FILL YOUR NEEDS
+		player:removeCondition(CONDITION_DROWN)
+		return true
+	end
 
 	if math.random(1, 10) == 1 then
 		position:sendMagicEffect(CONST_ME_BUBBLES)
