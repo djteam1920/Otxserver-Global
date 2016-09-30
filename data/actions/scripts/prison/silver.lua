@@ -1,3 +1,7 @@
+local config = {
+    daily = false,
+	centerSilverRoomPosition = Position(33526, 32418, 12)
+	}
 	silver = {x=33527, y=32419, z=12}
 
 function onUse(cid, item, fromPosition, itemEx)
@@ -14,5 +18,14 @@ function onUse(cid, item, fromPosition, itemEx)
 			end
 		end
 	end
+			local specs, spec = Game.getSpectators(config.centerSilverRoomPosition, false, false, 16, 16, 16, 16)
+		for i = 1, #specs do
+			spec = specs[i]
+			if spec:isPlayer() then
+				return true
+			end
+
+			spec:remove()
+		end
 	return true
 end
