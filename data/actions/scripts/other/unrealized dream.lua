@@ -88,18 +88,23 @@ elseif presente == 17 then
 doSendMagicEffect(pos,26)
 doPlayerAddItem(cid,2072,1) -- Lute
 doRemoveItem(item.uid,1)
-
+		
 elseif presente == 18 then
 doSendMagicEffect(pos,26)
-doPlayerAddItem(cid,22606,1) -- Bronze Prison Key
+doPlayerAddItem(cid,22605,1) -- Copper Prison Key
 doRemoveItem(item.uid,1)
 
 elseif presente == 19 then
 doSendMagicEffect(pos,26)
-doPlayerAddItem(cid,22604,1) -- Silver Prison Key
+doPlayerAddItem(cid,22606,1) -- Bronze Prison Key
 doRemoveItem(item.uid,1)
 
 elseif presente == 20 then
+doSendMagicEffect(pos,26)
+doPlayerAddItem(cid,22604,1) -- Silver Prison Key
+doRemoveItem(item.uid,1)
+
+elseif presente == 21 then
 doSendMagicEffect(pos,26)
 doPlayerAddItem(cid,22607,1) -- Golden Prison Key
 doRemoveItem(item.uid,1)
